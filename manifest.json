@@ -1,0 +1,21 @@
+{
+	"name": "GG Casino",
+	"short_name": "GG Casino",
+	"description": "GG Casino is the best site for your gambling experience",
+	"start_url": "/",
+	"form_factor": ["small", "medium", "large"],
+	"display": "standalone",
+	"background_color": "#fff",
+	"theme_color": "#fff",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/favicon.ico",
+			"type": "image/x-icon",
+			"sizes": "150x150"
+		}
+	],
+	"scope": "/",
+	"lang": "en",
+	"dir": "ltr"
+}

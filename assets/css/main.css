@@ -1,0 +1,30 @@
+@import './base.css';
+
+:root {
+    --color-white: #fff;
+}
+
+/* REUSED STYLES */
+
+/* HEADER */
+
+/* MAIN */
+
+/* FOOTER */
+
+/* MEDIA */
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 960px) {
+
+}
+@media (max-width: 720px) {
+
+}
+@media (max-width: 540px) {
+
+}
+@media (max-width: 420px) {
+
+}
