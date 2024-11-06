@@ -394,6 +394,7 @@
 .games__game-name {
 	font-size: var(--fontSize-16);
 	color: var(--color-gray-1);
+	text-transform: uppercase;
 }
 .games__game-bonus {
 	font-size: var(--fontSize-20);
@@ -839,7 +840,6 @@
 		width: 80%;
 	}
 	.best-games__title {
-		gap: 10px;
 		font-size: var(--fontSize-24);
 	}
 	.best-games__pros {
@@ -886,6 +886,13 @@
 		width: 80%;
 	}
 	/* MAIN -> GAMES */
+	.games__title {
+		font-size: var(--fontSize-24);
+	}
+	.games__game {
+		display: flex;
+		flex-direction: column;
+	}
 	/* MAIN -> FAST-PAYMENTS */
 	/* MAIN -> ABOUT-US */
 	/* MAIN -> FAST-PAYMENTS */
@@ -937,6 +944,13 @@
 	.bg-img-1 {
 		background-size: 100%;
 	}
+	.game-rating__star {
+		height: 14px;
+		width: 14px;
+	}
+	.game-rating__text {
+		font-size: var(--fontSize-14);
+	}
 	/* HEADER */
 	.header__logo {
 		font-size: var(--fontSize-24);
@@ -966,6 +980,9 @@
 		height: 120px;
 	}
 	/* MAIN -> GAMES */
+	.games__title {
+		font-size: 20px;
+	}
 	/* MAIN -> FAST-PAYMENTS */
 	/* MAIN -> ABOUT-US */
 	/* MAIN -> FAST-PAYMENTS */
