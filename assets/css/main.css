@@ -4,6 +4,7 @@
 	--color-white: #fff;
 	--color-black-1: #000000;
 	--color-black-2: #2d3748;
+	--color-black-3: #20282e;
 	--color-translucent-1: rgba(15, 13, 13, 0.7);
 	--color-purple-1: #17001e;
 	--color-green-1: #008542;
@@ -62,9 +63,12 @@
 .bg-img-2 {
 	width: 100%;
 	background-image: url(../images/casino.jpg);
+	background-attachment: fixed;
+	background-size: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 80px 0;
 }
 .game-rating {
 	display: flex;
@@ -105,7 +109,6 @@
 }
 .copyright {
 	color: var(--color-white);
-	font-weight: var(--weight-semibold);
 }
 
 /* HEADER */
@@ -150,6 +153,9 @@
 	-ms-user-select: none;
 	user-select: none;
 }
+.header__language button {
+	color: var(--color-white);
+}
 .header__language svg {
 	position: absolute;
 	left: 0;
@@ -179,7 +185,6 @@
 }
 
 /* MAIN -> BEST-GAMES */
-
 .best-games {
 	width: min(1200px, 100%);
 	padding: 40px 0 0 0;
@@ -409,6 +414,7 @@
 	color: var(--color-black-2);
 	margin-bottom: 1rem;
 }
+
 /* MAIN -> BEST-BONUSES */
 .best-bonuses {
 	width: 100%;
@@ -416,6 +422,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.best-bonuses__container {
+	width: min(1200px, 100%);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 .best-bonuses__title {
 	font-size: var(--fontSize-32);
@@ -427,23 +439,169 @@
 	background-color: var(--color-translucent-1);
 	padding: 20px;
 	border-radius: 10px;
-	width: ;
+	width: calc((100% - 20px) / 2);
 }
 .best-bonuses__bonus-icon {
+	width: 24px;
+	height: 24px;
 }
 .best-bonuses__bonus-title {
+	display: flex;
+	gap: 5px;
+	color: var(--color-white);
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 1rem;
 }
 .best-bonuses__bonus-text {
+	line-height: 1.3;
+	color: var(--color-white);
 }
 
 /* MAIN -> FAQ */
+.faq {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 40px 20px;
+}
+.faq__container {
+	width: min(1200px, 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+.faq__title {
+	color: var(--color-white);
+	font-size: var(--fontSize-24);
+}
+.faq__questions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+.faq__question {
+	background-color: var(--color-translucent-1);
+	padding: 20px;
+	height: auto;
+	border-radius: 10px;
+	max-height: 64px;
+	overflow: hidden;
+	transition: max-height 200ms ease-in-out;
+}
+.faq__question-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	gap: 5px;
+}
+.faq__question-title {
+	color: var(--color-white);
+	font-size: var(--fontSize-24);
+	font-weight: var(--weight-regular);
+}
+.faq__question-btn {
+	color: var(--color-white);
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	transition: all 200ms ease;
+	transform: rotate(45deg);
+}
+.faq__question-body {
+	padding-left: 40px;
+	padding-right: 20px;
+}
+.faq__question-text {
+	color: var(--color-white);
+}
 
 /* MAIN -> ABOUT-CASINO */
+.about-casino {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 40px 20px 0 20px;
+	background-color: var(--color-black-3);
+}
+.about-casino__info-container {
+	background-color: var(--color-translucent-1);
+	width: 100%;
+	height: max-content;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.about-casino__title {
+	color: var(--color-white);
+	font-size: var(--fontSize-32);
+}
+.about-casino__container {
+	width: min(1200px, 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.about-casino__swiper {
+	width: 100%;
+	height: max-content;
+	margin-bottom: 32px;
+}
+.about-casino__swiper .swiper-slide {
+	padding: 20px 60px;
+}
+.about-casino__swiper-title-container {
+	display: flex;
+}
+.about-casino__swiper-title {
+	color: var(--color-white);
+	font-family: sans-serif;
+	font-size: var(--fontSize-24);
+	margin-bottom: 1rem;
+}
+.about-casino__swiper-text {
+	color: var(--color-white);
+	font-family: sans-serif;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+}
+.about-casino__swiper-text:last-of-type {
+	margin: 0;
+}
+.about-casino .swiper-button-next::after,
+.about-casino .swiper-button-prev::after {
+	font-size: 24px; /* Размер стрелок */
+	font-weight: 900;
+	color: var(--color-white); /* Цвет стрелок */
+}
+.about-casino .swiper-pagination-bullet {
+	background: lightgray; /* Синий цвет всех точек */
+	opacity: 1; /* Чтобы точки были полностью видны */
+}
+.about-casino .swiper-pagination-bullet-active {
+	background: gray; /* Красный цвет активной точки */
+}
+.about-casino .swiper-button-next::after,
+.about-casino .swiper-button-prev::after {
+	font-size: 24px; /* Размер стрелок */
+	font-weight: var(--weight-heavy);
+	color: var(--color-white); /* Цвет стрелок */
+}
+.about-casino .swiper-pagination-bullet {
+	background: lightgray; /* Синий цвет всех точек */
+	opacity: 1; /* Чтобы точки были полностью видны */
+}
+.about-casino .swiper-pagination-bullet-active {
+	background: gray; /* Красный цвет активной точки */
+}
 
 /* FOOTER */
 .footer {
 	width: 100%;
-	background: var(--color-black-2);
+	background: var(--color-black-1);
 	padding: 40px 20px 20px 20px;
 	display: flex;
 	align-items: center;
@@ -471,12 +629,11 @@
 }
 .footer__contact {
 	color: var(--color-white);
-	font-weight: var(--weight-semibold);
 }
 .footer__line {
 	height: 1px;
 	width: 100%;
-	background-color: var(--color-gray-1);
+	background-color: var(--color-black-2);
 }
 
 /* MEDIA */

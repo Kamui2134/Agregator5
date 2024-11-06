@@ -8,6 +8,28 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="manifest" href="manifest.json" />
 		<base target="_blank" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<!-- Стили для скрытия виджета и плашки Google Translate -->
+		<style>
+			/* Скрываем интерфейс Google Translate */
+			#google_translate_element {
+				display: none;
+			}
+			/* Скрываем верхнюю плашку Google Translate */
+			.goog-te-banner-frame.skiptranslate {
+				display: none !important;
+			}
+			body {
+				top: 0px !important;
+			}
+			/* Предотвращаем перевод текста на кнопках */
+			.notranslate {
+				display: inline !important;
+			}
+		</style>
 	</head>
 	<body>
 		<header class="header">
@@ -20,9 +42,15 @@
 					<a class="header__nav-link" href="">Contact Us</a>
 				</nav>
 				<ul class="header__languages">
-					<li class="header__language">EN</li>
-					<li class="header__language">DE</li>
-					<li class="header__language">FR</li>
+					<li class="header__language">
+						<button class="notranslate" onclick="translatePage('')">EN</button>
+					</li>
+					<li class="header__language">
+						<button class="notranslate" onclick="translatePage('de')">DE</button>
+					</li>
+					<li class="header__language">
+						<button class="notranslate" onclick="translatePage('fr')">FR</button>
+					</li>
 				</ul>
 			</div>
 		</header>
@@ -852,9 +880,236 @@
 						</div>
 					</div>
 				</section>
-				<section class="faq"></section>
+				<section class="faq">
+					<div class="faq__container">
+						<h1 class="faq__title">FAQ</h1>
+						<div class="faq__questions">
+							<div class="faq__question">
+								<div class="faq__question-head">
+									<h1 class="faq__question-title">
+										What games can be found on the site?
+									</h1>
+									<img
+										src="./assets/images/icons/cross.svg"
+										alt="open"
+										class="faq__question-btn"
+									/>
+								</div>
+								<div class="faq__question-body">
+									<p class="faq__question-text">
+										The site offers a variety of games, including action,
+										puzzle, strategy, adventure, and simulation games, among
+										others. You can explore different genres to find games that
+										match your interests and preferences.
+									</p>
+								</div>
+							</div>
+							<div class="faq__question">
+								<div class="faq__question-head">
+									<h1 class="faq__question-title">
+										Are there any loyalty or VIP programs for regular players?
+									</h1>
+									<img
+										src="./assets/images/icons/cross.svg"
+										alt="open"
+										class="faq__question-btn"
+									/>
+								</div>
+								<div class="faq__question-body">
+									<p class="faq__question-text">
+										Yes, many online casinos offer loyalty or VIP programs
+										designed for regular players. These programs typically
+										reward frequent play with benefits such as bonus points,
+										cashback offers, faster withdrawal times, exclusive bonuses,
+										and even personal account managers. The more you play, the
+										more points or rewards you accumulate, which can lead to
+										higher VIP levels and additional perks. Each casino has its
+										own structure for loyalty programs, so it’s a good idea to
+										check the details on the site to see what’s offered and how
+										you can qualify.
+									</p>
+								</div>
+							</div>
+							<div class="faq__question">
+								<div class="faq__question-head">
+									<h1 class="faq__question-title">
+										Is there a welcome bonus for new players?
+									</h1>
+									<img
+										src="./assets/images/icons/cross.svg"
+										alt="open"
+										class="faq__question-btn"
+									/>
+								</div>
+								<div class="faq__question-body">
+									<p class="faq__question-text">
+										Yes, most online casinos offer a welcome bonus for new
+										players. This bonus is typically designed to encourage new
+										users to sign up and make their first deposit. Welcome
+										bonuses can come in various forms, such as a percentage
+										match on the initial deposit (for example, a 100% bonus up
+										to a certain amount), free spins on specific slot games, or
+										a combination of both. The specific terms and conditions,
+										including wagering requirements and eligible games, vary by
+										casino, so it's important to read the details provided
+										during the sign-up process to understand how to take full
+										advantage of the offer.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-			<section class="about-casino"></section>
+			<section class="about-casino">
+				<div class="about-casino__container">
+					<h1 class="about-casino__title">About Online Casino</h1>
+					<div class="swiper about-casino__swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="about-casino__info-container">
+									<div class="about-casino__swiper-title-container">
+										<img src="" alt="" />
+										<h2 class="about-casino__swiper-title">
+											Tips and Safety Criteria
+										</h2>
+									</div>
+									<p class="about-casino__swiper-text">
+										Choosing an online casino can be overwhelming, especially
+										with so many platforms available. However, prioritizing
+										safety and reliability will ensure a positive experience and
+										protect your personal and financial information. A key
+										factor is to check for valid licensing from reputable
+										gambling authorities, such as the UK Gambling Commission or
+										the Malta Gaming Authority. Licensed casinos are subject to
+										strict regulations, which safeguard fair gaming and player
+										rights. Make sure the casino’s license is visible on its
+										homepage, and verify it with the relevant authority if
+										needed.
+									</p>
+									<p class="about-casino__swiper-text">
+										Another essential criterion is the security of the website.
+										Reliable online casinos use SSL encryption to protect your
+										data from unauthorized access, ensuring that all
+										transactions and personal details remain private. Look for
+										the padlock icon in the browser bar or check if the casino’s
+										URL begins with “https,” as this indicates that the site
+										uses encryption. Additionally, a trustworthy casino will
+										have a transparent privacy policy that outlines how your
+										data is used and stored.
+									</p>
+									<p class="about-casino__swiper-text">
+										Finally, consider the casino’s reputation and customer
+										reviews. Reading experiences from other players can provide
+										insight into the platform’s reliability, payout speed, and
+										overall customer service. Reputable casinos also offer
+										multiple secure payment options, including well-known
+										e-wallets, bank transfers, and credit cards. These payment
+										methods provide additional layers of security and enhance
+										the trustworthiness of the casino. By following these
+										criteria, you can confidently choose a secure and reliable
+										online casino for your gaming experience.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="about-casino__info-container">
+									<div class="about-casino__swiper-title-container">
+										<img src="" alt="" />
+										<h2 class="about-casino__swiper-title">
+											Top Games and Strategies for Beginners in Online Casinos
+										</h2>
+									</div>
+									<p class="about-casino__swiper-text">
+										For beginners exploring online casinos, some games are
+										particularly well-suited due to their simplicity and
+										favorable odds. Games like slots, blackjack, and roulette
+										are popular choices for newcomers because they offer
+										straightforward rules and the chance to win with minimal
+										strategy. Slots, for example, require no prior
+										experience—just pick a game, set your wager, and spin the
+										reels. Blackjack and roulette are also beginner-friendly,
+										with basic rules that can be easily learned, allowing you to
+										enjoy the game without a steep learning curve.
+									</p>
+									<p class="about-casino__swiper-text">
+										A good beginner strategy in games like blackjack and
+										roulette is to start with small, conservative bets while
+										getting a feel for the game. In blackjack, understanding
+										basic strategy—such as knowing when to hit or stand based on
+										the dealer’s card—can improve your chances of winning.
+										Meanwhile, in roulette, sticking to outside bets (such as
+										red/black or odd/even) provides a nearly 50/50 chance,
+										making it a safer choice for beginners. These strategies
+										don’t guarantee wins, but they help beginners manage their
+										bankrolls and extend their playing time.
+									</p>
+									<p class="about-casino__swiper-text">
+										Lastly, remember to take advantage of free games or demo
+										versions when available. Many online casinos offer free-play
+										versions of popular games, allowing beginners to practice
+										without risking real money. Using these demos can help you
+										get comfortable with the rules and understand game mechanics
+										before committing funds. By familiarizing yourself with the
+										games and following simple strategies, you can maximize both
+										your enjoyment and your potential for success as you start
+										your online casino journey.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="about-casino__info-container">
+									<div class="about-casino__swiper-title-container">
+										<img src="" alt="" />
+										<h2 class="about-casino__swiper-title">
+											What You Need to Know About Online Casinos
+										</h2>
+									</div>
+									<p class="about-casino__swiper-text">
+										Online casinos offer excitement and convenience, but there
+										are some essential things you should know before you start
+										playing. One of the first things to check is whether the
+										casino is licensed and regulated by reputable authorities
+										like the Malta Gaming Authority or the UK Gambling
+										Commission. These licenses ensure that the casino adheres to
+										strict standards of fairness, security, and responsible
+										gaming. Without a valid license, a casino may not be
+										trustworthy, and it could put your personal information or
+										funds at risk.
+									</p>
+									<p class="about-casino__swiper-text">
+										Another important aspect to consider is the variety of games
+										and the software providers that power them. Top online
+										casinos partner with reputable software companies like
+										Microgaming, NetEnt, and Evolution Gaming, which are known
+										for high-quality, fair games. Make sure the casino offers a
+										diverse range of games—such as slots, table games, and live
+										dealer options—so you can explore different experiences and
+										find games that suit your interests. Also, look out for
+										information on the casino’s payout rates, which can give you
+										an idea of your winning potential.
+									</p>
+									<p class="about-casino__swiper-text">
+										Finally, understand the casino’s bonuses and terms before
+										signing up. Many online casinos offer welcome bonuses, free
+										spins, and other promotions to attract new players, but
+										these often come with wagering requirements that dictate how
+										many times you need to bet the bonus amount before
+										withdrawing it. Reading and understanding the terms and
+										conditions can help you avoid surprises and make the most of
+										these offers. By knowing these essential factors, you can
+										choose a reputable online casino that provides a safe and
+										enjoyable gaming experience.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -898,6 +1153,11 @@
 				<div class="footer__line"></div>
 			</div>
 		</footer>
+		<div id="google_translate_element" style="display: none"></div>
+		<script
+			type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
 		<script src="./assets/js/index.js"></script>
 		<script>
 			for (let a of [...document.querySelectorAll('a')]) {
@@ -908,6 +1168,22 @@
 					(a.href.includes('?') ? '&' : '?') +
 					document.location.search.substr(1)
 			}
+		</script>
+		<script type="module">
+			import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+			const bestBonusesSwiper = new Swiper('.about-casino__swiper', {
+				direction: 'horizontal',
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			})
 		</script>
 	</body>
 </html>
