@@ -54,11 +54,13 @@
 	width: 100%;
 	background-image: url(../images/money.png);
 	background-repeat: repeat;
+	background-attachment: fixed;
 	background-size: 33%;
 	background-color: var(--color-purple-1);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 0 20px;
 }
 .bg-img-2 {
 	width: 100%;
@@ -68,7 +70,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 80px 0;
+	padding: 80px 20px;
 }
 .game-rating {
 	display: flex;
@@ -89,6 +91,7 @@
 	color: var(--color-gray-1);
 	font-size: var(--fontSize-20);
 	font-weight: var(--weight-bold);
+	text-wrap: nowrap;
 }
 .casino-link {
 	display: flex;
@@ -118,6 +121,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
+	position: relative;
 }
 .header__container {
 	width: min(1200px, 100%);
@@ -133,6 +137,10 @@
 	display: flex;
 	align-items: center;
 	gap: 30px;
+	transition: transform 200ms ease;
+}
+.header__nav.active {
+	transform: translateX(100%);
 }
 .header__nav-link {
 	color: var(--color-white);
@@ -175,6 +183,35 @@
 .header__language:active path {
 	stroke-dashoffset: 0;
 }
+.header__nav-btn-line {
+	height: 3px;
+	margin-block: 4px;
+	background: var(--color-white);
+	transition: transform 200ms ease, width 200ms ease;
+}
+.header__nav-btn {
+	display: none;
+}
+.header__nav-btn-line--1 {
+	margin-inline-start: auto;
+	width: 20px;
+}
+.header__nav-btn-line--2 {
+	width: 15px;
+}
+.header__nav-btn-line--3 {
+	width: 10px;
+}
+
+.header__nav-btn.active .header__nav-btn-line--2 {
+	width: 0;
+}
+.header__nav-btn.active .header__nav-btn-line--1 {
+	transform: translate(0px, 7px) rotate(45deg);
+}
+.header__nav-btn.active .header__nav-btn-line--3 {
+	transform: translate(5px, -7px) rotate(-45deg) scaleX(2);
+}
 
 /* MAIN */
 .main {
@@ -188,12 +225,62 @@
 .best-games {
 	width: min(1200px, 100%);
 	padding: 40px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .best-games__games {
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: stretch;
 	gap: 20px;
+}
+.best-games__description {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-bottom: 10px;
+}
+.best-games__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--color-white);
+	font-size: var(--fontSize-32);
+}
+.best-games__img {
+	width: 40px;
+	height: 40px;
+}
+.best-games__disclaimer {
+	color: var(--color-white);
+	font-weight: var(--weight-bold);
+	background-color: red;
+	width: max-content;
+	max-width: 100%;
+}
+.best-games__pros {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.best-games__pro {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: var(--color-white);
+	font-weight: var(--weight-semibold);
+}
+.best-games__pro-icon {
+	width: 52px;
+	height: 52px;
+}
+.best-games__text {
+	color: var(--color-white);
+	font-size: var(--fontSize-14);
 }
 .best-games__game {
 	display: flex;
@@ -208,6 +295,8 @@
 .best-games__game-logo {
 	width: 100%;
 	height: 180px;
+	object-fit: contain;
+	border-radius: 5px;
 }
 .best-games__game-name {
 	color: var(--color-black-2);
@@ -219,6 +308,10 @@
 	font-weight: var(--weight-bold);
 	text-transform: uppercase;
 	text-align: center;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .best-games__advantages {
 	width: 100%;
@@ -237,6 +330,10 @@
 }
 .best-games__advantage-text {
 	color: var(--color-black-2);
+	max-width: 100%;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .casino-link--best-games {
 	margin-top: auto;
@@ -252,22 +349,46 @@
 	flex-direction: column;
 	gap: 15px;
 }
-.games__game {
+.games__description {
+	padding-bottom: 10px;
+}
+.games__title {
 	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--color-white);
+	font-size: var(--fontSize-32);
+}
+.games__img {
+	width: 40px;
+	height: 40px;
+}
+.games__game {
+	display: grid;
+	grid-template-columns: 240px 3fr 1fr;
 	gap: 10px;
 	align-items: center;
 	background-color: var(--color-white);
 	border-radius: 10px;
 	overflow: hidden;
 }
+.games__game-logo-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .games__game-logo {
-	height: 194px;
+	width: 100%;
+	height: 160px;
+	object-fit: contain;
+	padding: 10px;
 }
 .games__game-info {
 	display: flex;
 	flex-direction: column;
 	padding: 10px 0;
-	flex-grow: 1;
 	gap: 12px;
 }
 .games__game-name {
@@ -638,12 +759,217 @@
 
 /* MEDIA */
 @media (max-width: 1200px) {
+	/* REUSED STYLES */
+	/* HEADER */
+	/* MAIN */
+	/* MAIN -> BEST-GAMES */
+	/* MAIN -> GAMES */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> ABOUT-US */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> BEST-BONUSES */
+	/* MAIN -> ABOUT-CASINO */
+	/* FOOTER */
 }
 @media (max-width: 960px) {
+	/* REUSED STYLES */
+	/* HEADER */
+	/* MAIN */
+	/* MAIN -> BEST-GAMES */
+	.best-games__description {
+		width: 90%;
+	}
+	.best-games__game {
+		width: calc((90% - 20px) / 2);
+	}
+	/* MAIN -> GAMES */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> ABOUT-US */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> BEST-BONUSES */
+	/* MAIN -> ABOUT-CASINO */
+	/* FOOTER */
 }
 @media (max-width: 720px) {
+	/* REUSED STYLES */
+	.game-rating {
+		gap: 4px;
+	}
+	.game-rating__stars {
+		gap: 4px;
+	}
+	.game-rating__star {
+		width: 20px;
+		height: 20px;
+	}
+	.game-rating__text {
+		font-size: var(--fontSize-16);
+	}
+	/* HEADER */
+	.header__container {
+		justify-content: flex-start;
+		gap: 10px;
+	}
+	.header__nav-btn {
+		display: block;
+	}
+	.header__nav {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		background-color: var(--color-black-1);
+		position: absolute;
+		top: 100%;
+		left: -100%;
+		padding: 20px;
+		border-top: 1px solid var(--color-white);
+	}
+	.header__nav-link {
+		font-weight: var(--weight-bold);
+	}
+	.header__languages {
+		margin-left: auto;
+	}
+	/* MAIN */
+	/* MAIN -> BEST-GAMES */
+	.best-games {
+		padding: 20px 0 0 0;
+	}
+	.best-games__description {
+		width: 80%;
+	}
+	.best-games__title {
+		gap: 10px;
+		font-size: var(--fontSize-24);
+	}
+	.best-games__pros {
+		flex-wrap: wrap;
+	}
+	.best-games__pro {
+		gap: 2px;
+		font-size: var(--fontSize-14);
+	}
+	.best-games__pro:nth-child(2) {
+		display: none;
+	}
+	.best-games__pro-icon {
+		width: 32px;
+		height: 32px;
+	}
+	.best-games__text {
+		font-size: var(--fontSize-12);
+	}
+	.best-games__games {
+		column-gap: 10px;
+	}
+	.best-games__game {
+		width: calc((80% - 10px) / 2);
+		gap: 10px;
+	}
+	.best-games__game-name {
+		font-size: var(--fontSize-20);
+	}
+	.best-games__game-bonus {
+		font-size: var(--fontSize-16);
+		font-weight: var(--weight-black);
+	}
+	.best-games__advantage {
+		gap: 0;
+	}
+	.best-games__advantages {
+		gap: 5px;
+	}
+	.best-games__advantage-text {
+		font-size: var(--fontSize-14);
+	}
+	.best-games__game:nth-child(1) {
+		width: 80%;
+	}
+	/* MAIN -> GAMES */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> ABOUT-US */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> BEST-BONUSES */
+	/* MAIN -> ABOUT-CASINO */
+	/* FOOTER */
 }
 @media (max-width: 540px) {
+	/* REUSED STYLES */
+	.bg-img-1 {
+		background-size: 50%;
+	}
+	.casino-link {
+		font-size: var(--fontSize-14);
+		padding: 12px 15px;
+	}
+	/* HEADER */
+	/* MAIN */
+	/* MAIN -> BEST-GAMES */
+	.best-games__description {
+		width: 100%;
+	}
+	.best-games__game:nth-child(1) {
+		width: 100%;
+	}
+	.best-games__game {
+		width: calc((100% - 10px) / 2);
+		padding: 10px;
+	}
+	.best-games__game-logo {
+		height: 150px;
+	}
+	.best-games__game-bonus {
+		font-size: var(--fontSize-14);
+	}
+	.best-games__advantage-text {
+		font-size: var(--fontSize-12);
+	}
+	/* MAIN -> GAMES */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> ABOUT-US */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> BEST-BONUSES */
+	/* MAIN -> ABOUT-CASINO */
+	/* FOOTER */
 }
 @media (max-width: 420px) {
+	/* REUSED STYLES */
+	.bg-img-1 {
+		background-size: 100%;
+	}
+	/* HEADER */
+	.header__logo {
+		font-size: var(--fontSize-24);
+	}
+	.header__language {
+		font-size: var(--fontSize-14);
+	}
+	/* MAIN */
+	/* MAIN -> BEST-GAMES */
+	.best-games {
+		padding: 10px 0 0 0;
+	}
+	.best-games__description {
+		gap: 5px;
+	}
+	.best-games__img {
+		width: 32px;
+		height: 32px;
+	}
+	.best-games__title {
+		font-size: var(--fontSize-20);
+	}
+	.best-games__disclaimer {
+		font-size: var(--fontSize-14);
+	}
+	.best-games__game-logo {
+		height: 120px;
+	}
+	/* MAIN -> GAMES */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> ABOUT-US */
+	/* MAIN -> FAST-PAYMENTS */
+	/* MAIN -> BEST-BONUSES */
+	/* MAIN -> ABOUT-CASINO */
+	/* FOOTER */
 }

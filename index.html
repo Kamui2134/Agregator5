@@ -12,28 +12,18 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-		<!-- Стили для скрытия виджета и плашки Google Translate -->
-		<style>
-			/* Скрываем интерфейс Google Translate */
-			#google_translate_element {
-				display: none;
-			}
-			/* Скрываем верхнюю плашку Google Translate */
-			.goog-te-banner-frame.skiptranslate {
-				display: none !important;
-			}
-			body {
-				top: 0px !important;
-			}
-			/* Предотвращаем перевод текста на кнопках */
-			.notranslate {
-				display: inline !important;
-			}
-		</style>
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__container">
+				<button
+					class="header__nav-btn"
+					aria-label="toggle-menu"
+				>
+					<span class="header__nav-btn-line header__nav-btn-line--1"></span>
+					<span class="header__nav-btn-line header__nav-btn-line--2"></span>
+					<span class="header__nav-btn-line header__nav-btn-line--3"></span>
+				</button>
 				<h1 class="header__logo">GG Casino</h1>
 				<nav class="header__nav">
 					<a class="header__nav-link" href="">Games</a>
@@ -46,10 +36,14 @@
 						<button class="notranslate" onclick="translatePage('')">EN</button>
 					</li>
 					<li class="header__language">
-						<button class="notranslate" onclick="translatePage('de')">DE</button>
+						<button class="notranslate" onclick="translatePage('de')">
+							DE
+						</button>
 					</li>
 					<li class="header__language">
-						<button class="notranslate" onclick="translatePage('fr')">FR</button>
+						<button class="notranslate" onclick="translatePage('fr')">
+							FR
+						</button>
 					</li>
 				</ul>
 			</div>
@@ -57,7 +51,52 @@
 		<main class="main">
 			<div class="bg-img-1">
 				<section class="best-games">
+					<div class="best-games__description">
+						<h1 class="best-games__title">
+							<img
+								class="best-games__img"
+								src="./assets/images/icons/roulette.svg"
+								alt="roulette"
+							/>
+							Best Online Casinos in UK
+						</h1>
+						<p class="best-games__disclaimer">
+							The content is not intended for users under the age of 18.
+						</p>
+						<div class="best-games__pros">
+							<p class="best-games__pro">
+								<img
+									class="best-games__pro-icon"
+									src="./assets/images/icons/money-bag.svg"
+									alt="icon"
+								/>
+								Best Bonuses
+							</p>
+							<p class="best-games__pro">
+								<img
+									class="best-games__pro-icon"
+									src="./assets/images/icons/secure.svg"
+									alt="icon"
+								/>
+								Secure & Confidentiality
+							</p>
+							<p class="best-games__pro">
+								<img
+									class="best-games__pro-icon"
+									src="./assets/images/icons/card.svg"
+									alt="icon"
+								/>
+								Fast Payments
+							</p>
+						</div>
+						<p class="best-games__text">
+							GG Casino offers a curated selection of top UK casino bonuses from
+							online casinos that are fully licensed and regulated by the United
+							Kingdom Gambling Commission (UKGC).
+						</p>
+					</div>
 					<ul class="best-games__games">
+						<!-- BASS WIN -->
 						<li class="best-games__game">
 							<img
 								style="background-color: var(--color-basswin)"
@@ -65,7 +104,7 @@
 								src="./assets/images/basswin.webp"
 								alt="logo"
 							/>
-							<h1 class="best-games__name">BassWin</h1>
+							<h1 class="best-games__game-name">BassWin</h1>
 							<div class="game-rating">
 								<div class="game-rating__stars">
 									<img
@@ -96,9 +135,7 @@
 								</div>
 								<p class="game-rating__text">5 / 5</p>
 							</div>
-							<p class="best-games__game-bonus">
-								Up to £450 bonus + 250 Free Spins
-							</p>
+							<p class="best-games__game-bonus">450% up to £3000</p>
 							<ul class="best-games__advantages">
 								<li class="best-games__advantage">
 									<img
@@ -107,7 +144,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>Diverse Game Library</span
 									>
 								</li>
 								<li class="best-games__advantage">
@@ -117,7 +154,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>Attractive Bonuses</span
 									>
 								</li>
 								<li class="best-games__advantage">
@@ -127,7 +164,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>Responsive Customer Support</span
 									>
 								</li>
 							</ul>
@@ -135,14 +172,15 @@
 								>VISIT CASINO</a
 							>
 						</li>
+						<!-- R2PBET -->
 						<li class="best-games__game">
 							<img
-								style="background-color: var(--color-basswin)"
+								style="background-color: var(--color-r2pbet)"
 								class="best-games__game-logo"
-								src="./assets/images/basswin.webp"
+								src="./assets/images/R2Pbet.jpg"
 								alt="logo"
 							/>
-							<h1 class="best-games__name">BassWin</h1>
+							<h1 class="best-games__game-name">R2Pbet</h1>
 							<div class="game-rating">
 								<div class="game-rating__stars">
 									<img
@@ -173,9 +211,7 @@
 								</div>
 								<p class="game-rating__text">5 / 5</p>
 							</div>
-							<p class="best-games__game-bonus">
-								Up to £450 bonus + 250 Free Spins
-							</p>
+							<p class="best-games__game-bonus">Up to £450 bonus</p>
 							<ul class="best-games__advantages">
 								<li class="best-games__advantage">
 									<img
@@ -183,9 +219,15 @@
 										src="./assets/images/icons/coin.svg"
 										alt="coin"
 									/>
-									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
-									>
+									<span class="best-games__advantage-text">750+ Games</span>
+								</li>
+								<li class="best-games__advantage">
+									<img
+										class="best-games__advantage-icon"
+										src="./assets/images/icons/coin.svg"
+										alt="coin"
+									/>
+									<span class="best-games__advantage-text">VIP Program</span>
 								</li>
 								<li class="best-games__advantage">
 									<img
@@ -194,17 +236,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
-									>
-								</li>
-								<li class="best-games__advantage">
-									<img
-										class="best-games__advantage-icon"
-										src="./assets/images/icons/coin.svg"
-										alt="coin"
-									/>
-									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>Mobile Play Anytime</span
 									>
 								</li>
 							</ul>
@@ -212,14 +244,15 @@
 								>VISIT CASINO</a
 							>
 						</li>
+						<!-- CAZEUS -->
 						<li class="best-games__game">
 							<img
-								style="background-color: var(--color-basswin)"
+								style="background-color: var(--color-cazeus)"
 								class="best-games__game-logo"
-								src="./assets/images/basswin.webp"
+								src="./assets/images/cazeus.jpg"
 								alt="logo"
 							/>
-							<h1 class="best-games__name">BassWin</h1>
+							<h1 class="best-games__game-name">Cazeus</h1>
 							<div class="game-rating">
 								<div class="game-rating__stars">
 									<img
@@ -251,7 +284,7 @@
 								<p class="game-rating__text">5 / 5</p>
 							</div>
 							<p class="best-games__game-bonus">
-								Up to £450 bonus + 250 Free Spins
+								100% up to £425 + 200 Free Spins
 							</p>
 							<ul class="best-games__advantages">
 								<li class="best-games__advantage">
@@ -261,7 +294,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>100% Up to £170</span
 									>
 								</li>
 								<li class="best-games__advantage">
@@ -270,9 +303,7 @@
 										src="./assets/images/icons/coin.svg"
 										alt="coin"
 									/>
-									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
-									>
+									<span class="best-games__advantage-text">Tournaments</span>
 								</li>
 								<li class="best-games__advantage">
 									<img
@@ -281,7 +312,7 @@
 										alt="coin"
 									/>
 									<span class="best-games__advantage-text"
-										>Up to £450 bonus + 250 Free Spins</span
+										>First Deposit Bonus 100% Up to £170</span
 									>
 								</li>
 							</ul>
@@ -292,16 +323,433 @@
 					</ul>
 				</section>
 				<section class="games">
+					<div class="games__description">
+						<h1 class="games__title">
+							<img
+								class="games__img"
+								src="./assets/images/icons/chips.svg"
+								alt="chips"
+							/>More Good Casinos
+						</h1>
+					</div>
 					<ul class="games__games">
+						<!-- FAT PIRATE -->
 						<li class="games__game">
-							<img
-								class="games__game-logo"
-								src="./assets/images/memocasino.webp"
-								alt="logo"
-								style="background-color: var(--color-memocasino)"
-							/>
+							<div
+								style="background-color: var(--color-fatpirate)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/fatPirate.jpg"
+									alt="logo"
+									style="background-color: var(--color-fatpirate)"
+								/>
+							</div>
 							<div class="games__game-info">
-								<h2 class="games__game-name">MEMOCASINO</h2>
+								<h2 class="games__game-name">FatPirate</h2>
+								<h1 class="games__game-bonus">100% up to £425</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">User-Friendly Interface</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">100% Up to £170</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Hundreds of Games</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- KING HILLS -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-kinghills)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/kinghills.webp"
+									alt="logo"
+									style="background-color: var(--color-kinghills)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">KingHills</h2>
+								<h1 class="games__game-bonus">
+									Up to £450 bonus + 250 Free Spins
+								</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">CashBack on Live Games</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">100 Free Spins</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">55% Up to £150</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- HEYSPIN -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-heyspin)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/heySpin.jpg"
+									alt="logo"
+									style="background-color: var(--color-heyspin)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">HeySpin</h2>
+								<h1 class="games__game-bonus">
+									100% up to £25 + 25 Free Spins
+								</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">£2500 in Prizes</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Build it With Bet Builder
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Drops & Wins</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- NINEWIN -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-ninewin)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/ninewin.png"
+									alt="logo"
+									style="background-color: var(--color-ninewin)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">NineWin</h2>
+								<h1 class="games__game-bonus">Up to £450 + 250 Free Spins</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">150 Free Spins</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">25% Up to £150</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Highly Competitive Odds</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- MEMOCASINO -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-memocasino)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/memocasino.webp"
+									alt="logo"
+									style="background-color: var(--color-memocasino)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">MemoCasino</h2>
 								<h1 class="games__game-bonus">
 									Up to £450 bonus + 250 Free Spins
 								</h1>
@@ -335,7 +783,7 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											DROPS & WINS: £30,000,000
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -345,7 +793,110 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											55% up to £150 + 100 Free Spins
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Tournaments</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- F7CASINO -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-f7casino)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/f7casino.svg"
+									alt="logo"
+									style="background-color: var(--color-f7casino)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">F7Casino</h2>
+								<h1 class="games__game-bonus">
+									100% up to €150 + 150 Free Spins
+								</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Weekly Cashback</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Third Bonus: 100% up to €150
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -355,17 +906,7 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
-										</p>
-									</li>
-									<li class="games__advantage">
-										<img
-											class="games__advantage-icon"
-											src="./assets/images/icons/coin.svg"
-											alt="coin"
-										/>
-										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Second Deposit Bonus: 55% up to €150 + 100 Free Spins
 										</p>
 									</li>
 								</ul>
@@ -404,17 +945,23 @@
 								<a class="casino-link" href="">VISIT CASINO</a>
 							</div>
 						</li>
+						<!-- LOKI -->
 						<li class="games__game">
-							<img
-								class="games__game-logo"
-								src="./assets/images/memocasino.webp"
-								alt="logo"
-								style="background-color: var(--color-memocasino)"
-							/>
+							<div
+								style="background-color: var(--color-loki)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/lokicasino.svg"
+									alt="logo"
+									style="background-color: var(--color-loki)"
+								/>
+							</div>
 							<div class="games__game-info">
-								<h2 class="games__game-name">MEMOCASINO</h2>
+								<h2 class="games__game-name">Loki</h2>
 								<h1 class="games__game-bonus">
-									Up to £450 bonus + 250 Free Spins
+									Welcome Bonus up to €6,000 + 230 Free Spins
 								</h1>
 								<div class="games__game-payments">
 									<img
@@ -445,8 +992,109 @@
 											src="./assets/images/icons/coin.svg"
 											alt="coin"
 										/>
+										<p class="games__advantage-text">5000+ Games</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Increased Winning Amounts
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">5 Free Spins</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- TIKITAKA -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-tikitaka)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/tikitaka.webp"
+									alt="logo"
+									style="background-color: var(--color-tikitaka)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">Tikitaka</h2>
+								<h1 class="games__game-bonus">Welcome Bonus 100% Up to £425</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Livecashback 25% Up to £170
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -456,7 +1104,7 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Weekly Cashback 15% Up to £2,250
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -466,17 +1114,7 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
-										</p>
-									</li>
-									<li class="games__advantage">
-										<img
-											class="games__advantage-icon"
-											src="./assets/images/icons/coin.svg"
-											alt="coin"
-										/>
-										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Accumulator Boost Up to 100%
 										</p>
 									</li>
 								</ul>
@@ -515,18 +1153,121 @@
 								<a class="casino-link" href="">VISIT CASINO</a>
 							</div>
 						</li>
+						<!-- GRANSINO -->
 						<li class="games__game">
-							<img
-								class="games__game-logo"
-								src="./assets/images/memocasino.webp"
-								alt="logo"
-								style="background-color: var(--color-memocasino)"
-							/>
+							<div
+								style="background-color: var(--color-gransino)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/gransino.jpg"
+									alt="logo"
+									style="background-color: var(--color-gransino)"
+								/>
+							</div>
 							<div class="games__game-info">
-								<h2 class="games__game-name">MEMOCASINO</h2>
-								<h1 class="games__game-bonus">
-									Up to £450 bonus + 250 Free Spins
-								</h1>
+								<h2 class="games__game-name">Gransino</h2>
+								<h1 class="games__game-bonus">100% Up to £425 + 200 FS</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">10% Cashback Up to £170</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Weekly 50 Free Spins</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">£595 + 50 Free Spins</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- COSMOBET -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-cosmobet)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/cosmobet.svg"
+									alt="logo"
+									style="background-color: var(--color-cosmobet)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">Cosmobet</h2>
+								<h1 class="games__game-bonus">150% First Deposit Bonus</h1>
 								<div class="games__game-payments">
 									<img
 										class="games__game-payment"
@@ -557,7 +1298,108 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Big Tournaments With Big Wins
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">24/7 Support</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Mobile Support</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- GOLDENBET -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-goldenmister)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/goldenmister.svg"
+									alt="logo"
+									style="background-color: var(--color-goldenmister)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">GoldenMister</h2>
+								<h1 class="games__game-bonus">125% First Deposit Bonus</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											250% Second Deposit Bonus
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -567,7 +1409,7 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											175% Bonus to Your Third Deposit
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -577,7 +1419,100 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											150% Bonus to Your Fourth Deposit
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- BOUTY REELS -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-bountyreels)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/bountyreels.svg"
+									alt="logo"
+									style="background-color: var(--color-bountyreels)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">BountyReels</h2>
+								<h1 class="games__game-bonus">50 Free Spins</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Get 5 £ Bonus</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Get The Gifts in Monthly Prize Draw!
 										</p>
 									</li>
 									<li class="games__advantage">
@@ -587,7 +1522,213 @@
 											alt="coin"
 										/>
 										<p class="games__advantage-text">
-											Up to £450 bonus + 250 Free Spins
+											Join The Game in Weekly Prize Draw!
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- LUCKY MISTER -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-luckymister)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/luckymister.svg"
+									alt="logo"
+									style="background-color: var(--color-luckymister)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">LuckyMister</h2>
+								<h1 class="games__game-bonus">
+									Get 450% bonus for first deposits!
+								</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">Mobile Support</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">990+ Games</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">5 Euro or 50 Free Spins</p>
+									</li>
+								</ul>
+							</div>
+							<div class="games__game-button">
+								<div class="game-rating">
+									<div class="game-rating__stars">
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+										<img
+											class="game-rating__star"
+											src="./assets/images/icons/star.svg"
+											alt="star"
+										/>
+									</div>
+									<p class="game-rating__text">5 / 5</p>
+								</div>
+								<a class="casino-link" href="">VISIT CASINO</a>
+							</div>
+						</li>
+						<!-- VERY WELL -->
+						<li class="games__game">
+							<div
+								style="background-color: var(--color-verywell)"
+								class="games__game-logo-container"
+							>
+								<img
+									class="games__game-logo"
+									src="./assets/images/verywell.svg"
+									alt="logo"
+									style="background-color: var(--color-verywell)"
+								/>
+							</div>
+							<div class="games__game-info">
+								<h2 class="games__game-name">VeryWell</h2>
+								<h1 class="games__game-bonus">Get 500% + 500FS</h1>
+								<div class="games__game-payments">
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/visa.svg"
+										alt="visa"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/mastercard.svg"
+										alt="mastercard"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/paypal.svg"
+										alt="paypal"
+									/>
+									<img
+										class="games__game-payment"
+										src="./assets/images/icons/applepay.svg"
+										alt="applepay"
+									/>
+								</div>
+								<ul class="games__advantages">
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Cool Gifts in Tournaments
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											Bonus 100% to The Deposit
+										</p>
+									</li>
+									<li class="games__advantage">
+										<img
+											class="games__advantage-icon"
+											src="./assets/images/icons/coin.svg"
+											alt="coin"
+										/>
+										<p class="games__advantage-text">
+											175FS + 175% Bonus For The Second Deposit!
 										</p>
 									</li>
 								</ul>
@@ -1153,11 +2294,6 @@
 				<div class="footer__line"></div>
 			</div>
 		</footer>
-		<div id="google_translate_element" style="display: none"></div>
-		<script
-			type="text/javascript"
-			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-		></script>
 		<script src="./assets/js/index.js"></script>
 		<script>
 			for (let a of [...document.querySelectorAll('a')]) {

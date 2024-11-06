@@ -168,15 +168,51 @@ for (let i = 0; i < questionsBtns.length; i++) {
 // Google Translate
 function googleTranslateElementInit() {
 	new google.translate.TranslateElement(
-		{ pageLanguage: 'en' },
+		{
+			pageLanguage: 'en',
+			includedLanguages: 'en,fr,de',
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+		},
 		'google_translate_element'
 	)
 }
 
 function translatePage(language) {
-	var translateSelect = document.querySelector('.goog-te-combo')
+	const translateSelect = document.querySelector('.goog-te-combo')
+
 	if (translateSelect) {
+		// Пустая строка в language вернет страницу к оригиналу (английскому)
 		translateSelect.value = language
 		translateSelect.dispatchEvent(new Event('change'))
+
+		// Отключение плашки (повторная попытка скрытия в случае загрузки Translate баннера)
+		setTimeout(() => {
+			const banner = document.querySelector('.goog-te-banner-frame')
+			if (banner) banner.style.display = 'none'
+		}, 500)
 	}
 }
+
+// Toggle Btn
+const nav = document.querySelector('.header__nav')
+const navToggler = document.querySelector('.header__nav-btn')
+const navLinks = document.querySelectorAll('.header__nav-link')
+
+navToggler.addEventListener('click', function () {
+	this.classList.toggle('active')
+	nav.classList.toggle('active')
+})
+
+// Paralax Effect
+window.addEventListener('scroll', function () {
+	const scrollPosition = window.pageYOffset
+	const parallaxSection = document.querySelector('.bg-img-1')
+
+	// Коэффициент параллакса: чем меньше значение, тем медленнее движение фона
+	const parallaxSpeed = 0.2
+
+	// Вычисляем новое положение фона
+	parallaxSection.style.backgroundPositionY = `${
+		 -scrollPosition * parallaxSpeed
+	}px`
+})
