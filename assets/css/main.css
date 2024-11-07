@@ -287,6 +287,8 @@
 	font-size: var(--fontSize-14);
 }
 .best-games__game {
+	position: relative;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -342,7 +344,26 @@
 .casino-link--best-games {
 	margin-top: auto;
 }
-
+.best-games__game:nth-of-type(1) {
+	border: 2px solid rgb(255, 196, 0);
+	box-shadow: 0 0 10px 6px gold;
+}
+.best-games__game:nth-of-type(1) .casino-link {
+	background-color: rgb(255, 196, 0);
+	box-shadow: 0 0 10px 6px rgb(255, 196, 0);
+}
+.best-games__best-line {
+	position: absolute;
+	text-transform: uppercase;
+	color: var(--color-white);
+	font-weight: var(--weight-bold);
+	font-family: sans-serif;
+	transform: rotate(-50deg);
+	background: rgb(255, 196, 0);
+	padding: 10px 100px;
+	top: 30px;
+	left: -80px;
+}
 /* MAIN -> GAMES */
 .games {
 	width: min(1200px, 100%);
