@@ -1080,6 +1080,9 @@
 		padding: 12px;
 	}
 	/* HEADER */
+	.header__language {
+		font-size: var(--fontSize-14);
+	}
 	/* MAIN */
 	/* MAIN -> BEST-GAMES */
 	.best-games__description {
@@ -1226,11 +1229,14 @@
 		font-size: var(--fontSize-14);
 	}
 	/* HEADER */
-	.header__logo {
-		font-size: var(--fontSize-24);
+	.header {
+		padding: 10px;
 	}
-	.header__language {
-		font-size: var(--fontSize-14);
+	.header__logo {
+		font-size: var(--fontSize-20);
+	}
+	.header__languages {
+		gap: 14px;
 	}
 	/* MAIN */
 	/* MAIN -> BEST-GAMES */
@@ -1282,5 +1288,16 @@
 	}
 	.footer__contact {
 		font-size: var(--fontSize-14);
+	}
+}
+@media (max-width: 360px) {
+	.header__container {
+		gap: 5px;
+	}
+	.header__logo {
+		font-size: var(--fontSize-16);
+	}
+	.header__language {
+		font-size: var(--fontSize-12);
 	}
 }
