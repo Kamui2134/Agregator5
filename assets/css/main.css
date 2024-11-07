@@ -135,6 +135,7 @@
 .header__logo {
 	color: var(--color-white);
 	font-family: 'Courier New', Courier, monospace;
+	text-wrap: nowrap;
 }
 .header__nav {
 	display: flex;
@@ -783,6 +784,12 @@
 @media (max-width: 960px) {
 	/* REUSED STYLES */
 	/* HEADER */
+	.header__logo {
+		font-size: var(--fontSize-24);
+	}
+	.header__nav {
+		gap: 15px;
+	}
 	/* MAIN */
 	/* MAIN -> BEST-GAMES */
 	.best-games__description {

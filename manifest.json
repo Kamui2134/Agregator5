@@ -1,7 +1,7 @@
 {
-	"name": "GG Casino",
-	"short_name": "GG Casino",
-	"description": "GG Casino is the best site for your gambling experience",
+	"name": "Royal Top Casinos",
+	"short_name": "Royal Top Casinos",
+	"description": "Royal Top Casinos is the best site for your gambling experience",
 	"start_url": "/",
 	"form_factor": ["small", "medium", "large"],
 	"display": "standalone",
