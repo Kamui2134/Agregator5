@@ -165,34 +165,6 @@ for (let i = 0; i < questionsBtns.length; i++) {
 	})
 }
 
-// Google Translate
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement(
-		{
-			pageLanguage: 'en',
-			includedLanguages: 'en,fr,de',
-			layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-		},
-		'google_translate_element'
-	)
-}
-
-function translatePage(language) {
-	const translateSelect = document.querySelector('.goog-te-combo')
-
-	if (translateSelect) {
-		// Пустая строка в language вернет страницу к оригиналу (английскому)
-		translateSelect.value = language
-		translateSelect.dispatchEvent(new Event('change'))
-
-		// Отключение плашки (повторная попытка скрытия в случае загрузки Translate баннера)
-		setTimeout(() => {
-			const banner = document.querySelector('.goog-te-banner-frame')
-			if (banner) banner.style.display = 'none'
-		}, 500)
-	}
-}
-
 // Toggle Btn
 const nav = document.querySelector('.header__nav')
 const navToggler = document.querySelector('.header__nav-btn')
