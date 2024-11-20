@@ -176,15 +176,15 @@ navToggler.addEventListener('click', function () {
 })
 
 // Paralax Effect
-window.addEventListener('scroll', function () {
-	const scrollPosition = window.pageYOffset
-	const parallaxSection = document.querySelector('.bg-img-1')
+// window.addEventListener('scroll', function () {
+// 	const scrollPosition = window.pageYOffset
+// 	const parallaxSection = document.querySelector('.bg-img-1')
 
-	// Коэффициент параллакса: чем меньше значение, тем медленнее движение фона
-	const parallaxSpeed = 0.2
+// 	// Коэффициент параллакса: чем меньше значение, тем медленнее движение фона
+// 	const parallaxSpeed = 0.2
 
-	// Вычисляем новое положение фона
-	parallaxSection.style.backgroundPositionY = `${
-		 -scrollPosition * parallaxSpeed
-	}px`
-})
+// 	// Вычисляем новое положение фона
+// 	parallaxSection.style.backgroundPositionY = `${
+// 		 -scrollPosition * parallaxSpeed
+// 	}px`
+// })
